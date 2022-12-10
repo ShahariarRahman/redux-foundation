@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { COUNTER_CONTEXT } from '../App';
+import { COUNTER_CONTEXT } from '../ContextApiPractice/ContextApiPractice';
 import './Child.css';
 
 const Child = () => {

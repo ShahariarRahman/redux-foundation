@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { COUNTER_CONTEXT } from '../App';
-import Child from './Child';
+import Child from '../Child/Child';
+import { COUNTER_CONTEXT } from '../ContextApiPractice/ContextApiPractice';
 
 const Parent = () => {
     const { count } = useContext(COUNTER_CONTEXT);

@@ -1,7 +1,7 @@
 /* box gradient, centralize, set radius  */
 .box {
     width: 24rem;
-    height: 14rem;
+    height: 12rem;
     border: double .6rem transparent;
     border-radius: .6rem;
     background-image: linear-gradient(white, white),
@@ -13,11 +13,17 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: 2rem;
 }
 
 /* front size */
 .box>p {
     font-size: 1.5rem;
+}
+
+h5 {
+    margin: 0;
+    color: gray;
 }
 
 /* btn style start ---------------------> */
@@ -31,7 +37,7 @@
 .btn {
     margin: .4rem;
     width: 8rem;
-    height: 2.5rem;
+    height: 2rem;
     font-weight: bold;
     border-radius: .5rem;
     border: 0;

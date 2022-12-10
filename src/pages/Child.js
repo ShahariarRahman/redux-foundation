@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Child.css';
 
 const Child = () => {
+    const [state, setState] = useState(0);
+
     return (
         <div className='box-container'>
             <div className='box'>
-                <p>0</p>
+                <p>{state}</p>
                 <div className='btn-container'>
-                    <button className='btn btn-inc'>Increment</button>
-                    <button className='btn btn-dec'>Decrement</button>
+                    <button className='btn btn-inc' onClick={() => setState(state + 1)}>Increment</button>
+                    <button className='btn btn-dec' onClick={() => setState((prevState) => prevState - 1)}>Decrement</button>
                 </div>
             </div>
         </div>

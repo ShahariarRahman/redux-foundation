@@ -5,10 +5,10 @@ const Counter = () => {
     const reducer = (state, action) => {
         console.log(action);
         if (action.type === 'INCREMENT') {
-            return state + 1;
+            return state + action.payload.count;
         }
         else if (action.type === 'DECREMENT') {
-            return state - 1;
+            return state - action.payload.count;
         }
     }
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -18,8 +18,8 @@ const Counter = () => {
             <div className='box'>
                 <p>{state}</p>
                 <div className='btn-container'>
-                    <button className='btn btn-inc' onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
-                    <button className='btn btn-dec' onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+                    <button className='btn btn-inc' onClick={() => dispatch({ type: 'INCREMENT', payload: { count: 5 } })}>Increment</button>
+                    <button className='btn btn-dec' onClick={() => dispatch({ type: 'DECREMENT', payload: { count: 5 } })}>Decrement</button>
                 </div>
             </div>
         </div>

@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { COUNTER_CONTEXT } from '../App';
 import './Child.css';
 
-const Child = ({ count, setCount }) => {
-    // local state
-    // const [count, setCount] = useState(0);
-
+const Child = () => {
+    const { count, setCount } = useContext(COUNTER_CONTEXT);
     return (
         <div className='box-container'>
             <div className='box'>
